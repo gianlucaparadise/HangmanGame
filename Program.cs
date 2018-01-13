@@ -14,7 +14,7 @@ namespace Test
             //return;
 
             Console.WriteLine("Welcome");
-            IHangmanGame game = new AssholeHangmanGame();
+            IHangmanGame game = new MeanHangmanGame();
             game.Start();
 
             while (!game.HasWon)
