@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Test
+namespace Test.Hangman
 {
-    public class HangmanGame
+    public class HangmanGame : IHangmanGame
     {
         public HangmanGame()
         {
+        }
+        
+        internal HangmanGame(string wordToGuess)
+        {
+            this.WordToGuess = wordToGuess;
         }
 
         public void Start()
@@ -39,14 +44,14 @@ namespace Test
             set;
         }
 
-        public bool IsGuessRight(string guess)
+        public bool IsGuessProcessable(string guess)
         {
             return !string.IsNullOrWhiteSpace(guess) && guess.Trim().Length == WordToGuess.Length;
         }
         
         public void ProcessGuess(string guessRaw)
         {
-            if (!IsGuessRight(guessRaw)) return;
+            if (!IsGuessProcessable(guessRaw)) return;
 
             string guess = guessRaw.ToLower();
             

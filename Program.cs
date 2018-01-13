@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Test.Hangman;
 
 namespace Test
 {
@@ -13,10 +14,8 @@ namespace Test
             //return;
 
             Console.WriteLine("Welcome");
-            HangmanGame game = new HangmanGame();
+            IHangmanGame game = new AssholeHangmanGame();
             game.Start();
-
-            Console.WriteLine(game.WordToGuess);
 
             while (!game.HasWon)
             {
@@ -26,7 +25,7 @@ namespace Test
                 Console.Write("Write your guess: ");
                 string guess = Console.ReadLine();
 
-                if (!game.IsGuessRight(guess))
+                if (!game.IsGuessProcessable(guess))
                 {
                     Console.WriteLine("\nGuess must be the same length as word to guess");
                     continue;

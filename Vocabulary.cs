@@ -8,6 +8,9 @@ namespace Test
         public static string[] Words =
         {
             "cat", "dog", "tan", "house",
+            "aaa",
+            "aab",
+            "aac",
             "kzw",
             "hnh",
             "amr",

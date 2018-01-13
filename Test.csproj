@@ -37,6 +37,8 @@
     <Compile Include="Vocabulary.cs" />
     <Compile Include="HangmanGame.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="MeanHangmanGame.cs" />
+    <Compile Include="IHangmanGame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
