@@ -78,6 +78,7 @@ namespace Test.Hangman
             if (PossibleWordsBank.Count == 1)
             {
                 NiceHangmanGame = new HangmanGame(PossibleWordsBank.First());
+                NiceHangmanGame.Start();
                 return true;
             }
 
